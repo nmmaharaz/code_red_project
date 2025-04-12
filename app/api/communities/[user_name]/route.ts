@@ -125,7 +125,7 @@ export async function GET(
 
 export async function PATCH(
   req: NextRequest,
-  context: { params: { user_name: string } }
+  context: { params}
 ) {
   const { user_name } = context.params;
   const { member } = await req.json();
