@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(
   req: Request,
-  { params }: { params: { email: string } }
+  { params }
 ) {
   const { email } = await params;
   const {
@@ -51,7 +51,7 @@ export async function POST(
   );
 }
 
-export async function GET(req:Request,{ params }: { params: { email: string } } ){
+export async function GET(req:Request,{ params }){
   const {email} =await params                    // from dynamic route
   const path = req.headers.get("path") || req.nextUrl.searchParams.get("path")
   const userCollection = await dbConnect(collectionNameObj.userCollection)
