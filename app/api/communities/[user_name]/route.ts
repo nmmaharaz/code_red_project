@@ -141,7 +141,7 @@ export async function PATCH(
 
 export async function DELETE(
   req: NextRequest,
-  context: { params: { user_name: string } }
+  context: { params}
 ) {
   const { user_name } = context.params;
   const url = new URL(req.url);
