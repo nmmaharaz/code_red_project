@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
   req: NextRequest,
-  context: { params: { user_name: string } }
+  context: { params }
 ) {
   const { user_name } = context.params;
 
